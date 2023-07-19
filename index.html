@@ -1,0 +1,44 @@
+<!--Use login e senha: "admin" para continuar.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça login<br>para acessar!</h1>
+            <img src="login.svg" class="left-login-image" alt="marinheiro">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" placeholder="Usuário" id="login">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha" id="senha">
+            </div>
+            <button class="btn-login" onclick="logar()">Login</button>
+        </div>
+    </div>
+    <script>
+        function logar(){
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == "admin" && senha == "admin"){
+                alert('Sucesso');
+                location.href = "https://github.com/Cron0sx82"
+            }else{
+                alert('Usuário ou senha incorretos');
+            }
+            }
+    </script>
+</body>
+</html>
